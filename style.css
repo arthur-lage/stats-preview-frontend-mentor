@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --very-dark-blue: hsl(233, 47%, 7%);
+  --dark-desaturated-blue: hsl(244, 38%, 16%);
+  --soft-violet: hsl(277, 64%, 61%);
+  --white: hsl(0, 0%, 100%);
+  --slightly-transparent-white-paragraph: hsla(0, 0%, 100%, 0.75);
+  --slightly-transparent-white-information: hsla(0, 0%, 100%, 0.6);
+}
+
+body {
+  height: 100vh;
+  background: var(--very-dark-blue);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.card {
+  border-radius: 7.5px;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  background-color: var(--dark-desaturated-blue);
+}
+
+.card .main-content {
+  padding: 4rem 0 2rem 4rem;
+}
+
+.card .main-content .title,
+.card .main-content .description {
+  font-family: "Inter";
+  max-width: 350px;
+}
+
+.card .main-content .title h1 {
+  color: var(--white);
+}
+
+.card .main-content .title span {
+  color: var(--soft-violet);
+}
+
+.card .main-content .description {
+  margin-top: 2.5rem;
+  color: var(--slightly-transparent-white-paragraph);
+  font-size: 15px;
+}
+
+.card .main-content .data {
+  display: flex;
+  margin: 4rem 0 1.5rem 0;
+  font-family: "Lexend Deca";
+}
+
+.card .main-content .data div {
+  margin: 0 2rem;
+}
+
+.card .main-content .data div:first-child {
+  margin-left: 0;
+}
+
+.card .main-content .data h3 {
+  color: var(--white);
+}
+
+.card .main-content .data p {
+  text-transform: uppercase;
+  letter-spacing: 0.075rem;
+  font-size: 15px;
+  color: var(--slightly-transparent-white-information);
+}
+
+.container .card .image{
+    background: url("images/image-header-desktop.jpg") no-repeat center center/cover;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 0 7.5px 7.5px 0;
+}
+
+.container .card .image .overlay{
+    background: var(--soft-violet);
+    overflow: hidden;
+    opacity: .5;
+    height: 100%;
+    z-index: 2;
+}
+
+/* Media Queries */
